@@ -55,7 +55,7 @@ class ViewController: UIViewController, ARSKViewDelegate {
     // MARK: - ARSKViewDelegate
     
     func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
-        return nil
+        return SKSpriteNode(imageNamed: "target")
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
