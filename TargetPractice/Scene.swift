@@ -74,11 +74,29 @@ class Scene: SKScene {
             sprite.run(sequence)
             
             targetCount -= 1
+            
+            if targetsCreated == 20 && targetCount == 0 {
+                gameOver()
+            }
         }
     }
     
     func gameOver() {
         
+        remainingTargetsLabel.removeFromParent()
+        
+        let gameOver = SKSpriteNode(imageNamed: "gameOver")
+        addChild(gameOver)
+        
+        let timeTaken = Date().timeIntervalSince(startTime)
+        let timeLabel = SKLabelNode(text: "Time taken: \(Int(timeTaken)) seconds")
+        
+        timeLabel.fontSize = 36
+        timeLabel.fontName = "AmericanTypewriter"
+        timeLabel.color = .white
+        timeLabel.position = CGPoint(x: 0, y: -view!.frame.midY + 50)
+        
+        addChild(timeLabel)
     }
 }
 
