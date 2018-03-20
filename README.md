@@ -1,4 +1,4 @@
-# teslaTrader
+# targetPractice
 A simple game utilizing ARKit to place targets around the user.  The goal is to hit all twenty targets as quickly as possible.
 
 ## Setup
